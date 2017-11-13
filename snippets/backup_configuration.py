@@ -4,9 +4,11 @@ import sys
 import csv
 from netmiko import ConnectHandler
 platform='cisco_ios'
-username=raw_input(' Username --> ')
-password=raw_input(' Password --> ')
-cef=raw_input(' Configuration to search --> ')
+#username=raw_input(' Username --> ')
+username='cisco'
+password='cisco'
+#password=raw_input(' Password --> ')''
+#cef=raw_input(' Configuration to search --> ')
 csv_file=sys.argv[1]
 
 def read_csv(csvname):
@@ -22,7 +24,7 @@ def backup_configurations(devices):
         device = ConnectHandler(device_type=platform, ip=ip_add, username=username, password=password)
         no_breakpage = device.disable_paging()
         output = device.send_command_expect('show version')
-        print output
+        print type(output)
         print "----------------------------------------"
         #Interfaces = output.split("\n")
         #for i in Interfaces:
