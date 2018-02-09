@@ -1,6 +1,6 @@
 # Network Automation Examples
 
-*Uses cases to apply automation*
+* Networking uses cases to apply automation*
 
 - Deploy same command on multiple devices
 - [Backup configurations from multiple devices and store them as a txt files](pending)
