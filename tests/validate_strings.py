@@ -1,4 +1,3 @@
-#/home/mbarrera/github.com/NetworkAutomation/bin/python3
 #coding=utf-8
 import sys
 word1 = "0s333sc"
@@ -9,7 +8,7 @@ print ("Second String:", word2)
 #check if strings are equal
 def equal_strings(word1,word2):
     if len(word1) != len(word2):
-        print ("Strins are not equal")
+        print ("Strings are not equal")
     string_size = len(word1)
     for i in range(string_size):
         if word1[i] != word2[i]:
