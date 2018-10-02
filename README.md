@@ -13,3 +13,5 @@ Automate everyday tasks:
 
 ### To Read
 
+###[GeneralKnowledge](https://github.com/markillob/NetworkAutomation/blob/master/tools/networking_notes.md)
+
