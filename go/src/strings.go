@@ -11,5 +11,6 @@ func main() {
 	fmt.Println(x)
 	z := "Hello" // initialize a variable
 	fmt.Println(z)
-
+	const y string = "Markillob" // contants
+	fmt.Println(y)
 }
