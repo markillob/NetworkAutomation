@@ -8,6 +8,10 @@ func main() {
 		fmt.Println(i)
 		i += 1
 	}
-
+	x:= "Hola Mundo"
+	for i := 1; i<=10; i++{
+		fmt.Println(i)
+	}
+	fmt.Printf("%c", x[1])
 
 }
