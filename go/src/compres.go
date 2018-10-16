@@ -4,9 +4,31 @@ import "fmt"
 import "strconv"
 
 func main() {
-	str := "1ola"
+	str := "s3d1c1s5b"
 	//fmt.Println(compress("aaannnddd"))
-	fmt.Println(isNumber(str[0]))
+	fmt.Println(decompress(str))
+}
+
+func decompress(input string) string {
+	if len(input) == 0 {
+		return "String Empty, try again "
+	}
+	tempLetterInitial := input[0]
+	output := ""
+	for i := 1; i < len(input); i++ {
+		if isNumber(input[i]) {
+			tempStringLetter, _ := strconv.Atoi(string(input[i]))
+			numTempLetter := int(tempStringLetter)
+			for count2 := 0; count2 < numTempLetter; count2++ {
+				//fmt.Println(numTempLetter)
+				output = output + string(tempLetterInitial)
+			}
+		} else {
+			tempLetterInitial = input[i]
+		}
+	}
+	output = output + string(input[(len(input)-1)])
+	return output
 }
 
 //s4b2s1
@@ -32,16 +54,6 @@ func compress(input string) string {
 		return output
 	}
 	return input
-}
-
-func decompress(input string) string {
-	if len(input) == 0 {
-		return
-	}
-	tempLetter := input[0]
-	for i := 1; i < len(input); i++ {
-
-	}
 }
 
 func isNumber(input byte) bool {
