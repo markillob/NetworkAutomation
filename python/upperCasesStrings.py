@@ -8,7 +8,9 @@ def upperPhrase(str):
         if i == 0:
             tempString = tempString + str[i].upper()
         elif str[i] == ' ':
-            tempString = tempString + str[i].upper()
+            tempString = tempString + str[i+1].upper()
+            i+=1
+            str[i] == ' '
             continue
         else:
             tempString = tempString + str[i]
