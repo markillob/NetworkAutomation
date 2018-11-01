@@ -4,16 +4,22 @@ def upperPhrase(str):
     countString = 0
     index=len(str)
     tempString = ''
-    for i in range(index):
-        if i == 0:
-            tempString = tempString + str[i].upper()
-        elif str[i] == ' ':
-            tempString = tempString + str[i+1].upper()
-            i+=1
-            str[i] == ' '
-            continue
+    for i in range(index) :
+        if i == countString :
+            if str[countString] == ' ' :
+                tempString = tempString + str[countString]
+                countString += 1
+                tempString = tempString + str[countString].upper()
+                countString += 1
+                continue
+            else :
+                if countString == 0 :
+                    tempString = tempString + str[countString].upper()
+                    countString += 1
+                    continue
+                tempString = tempString + str[countString]
+                countString += 1
         else:
-            tempString = tempString + str[i]
-        countString += 1
+            continue
     return tempString
 print (upperPhrase('arriba las chivas'))
