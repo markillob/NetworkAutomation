@@ -22,4 +22,18 @@ def upperPhrase(str):
         else:
             continue
     return tempString
+
+def FirstFactorial( int ) :
+    contTemp = 1
+    output = 1
+    if int  > 18 or int == 0 :
+        print ("Greater than 18 or value = 0"  , int )
+        return int
+    else:
+        for i in range( int ):
+            contTemp = contTemp * output
+            output+=1
+        return contTemp
+print (FirstFactorial(0))
+
 print (upperPhrase('arriba las chivas'))
