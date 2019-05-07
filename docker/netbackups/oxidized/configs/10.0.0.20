@@ -1,0 +1,217 @@
+! Cisco IOS XE Software, Version 16.06.01
+! 
+! Image: Software: X86_64_LINUX_IOSD-UNIVERSALK9-M, 16.6.1, RELEASE SOFTWARE (fc2)
+! Image: Compiled: Sat 22-Jul-17 05:51 by mcpre
+! Image: bootflash:packages.conf
+! Chassis type: CSR1000V
+! Memory: main 1225511K/3075K
+! Processor ID: 9EHTV0H39NP
+! CPU: VXE
+! Memory: nvram 32768K
+! 
+! VTP: show vtp status
+! 
+! NAME: "Chassis", DESCR: "Cisco CSR1000V Chassis"
+! PID: CSR1000V          , VID: V00  , SN: 9EHTV0H39NP
+! 
+! NAME: "module R0", DESCR: "Cisco CSR1000V Route Processor"
+! PID: CSR1000V          , VID: V00  , SN: JAB1303001C
+! 
+! NAME: "module F0", DESCR: "Cisco CSR1000V Embedded Services Processor"
+! PID: CSR1000V          , VID:      , SN:            
+! 
+! 
+!
+! Last configuration change at 03:20:04 UTC Tue May 7 2019
+!
+version 16.6
+service timestamps debug datetime msec
+service timestamps log datetime msec
+platform qfp utilization monitor load 80
+no platform punt-keepalive disable-kernel-core
+platform console serial
+!
+hostname ios-xe
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+subscriber templating
+! 
+! 
+! 
+! 
+!
+!
+!
+multilink bundle-name authenticated
+!
+!
+!
+!
+!
+crypto pki trustpoint TP-self-signed-1098863156
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1098863156
+ revocation-check none
+ rsakeypair TP-self-signed-1098863156
+!
+!
+crypto pki certificate chain TP-self-signed-1098863156
+ certificate self-signed 01
+  30820330 30820218 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 31303938 38363331 3536301E 170D3139 30343035 30353131 
+  35325A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649 
+  4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D31 30393838 
+  36333135 36308201 22300D06 092A8648 86F70D01 01010500 0382010F 00308201 
+  0A028201 0100B628 F2C922EC 9720FC43 994BD1FF FB54F7E7 873450BE 1955B2B8 
+  B0A4F083 E4E04B2E C6E77232 91670622 B29E6588 4FD11D8A 582034D2 6C22A2CE 
+  F169C350 309962AD 118D2F99 C2B4CC28 E8A948EA EAD6D3B1 DF4FF827 BA0F0296 
+  D07B5D42 FB8E0E5B 8C221980 58F478A6 4F6191CF 8C5809C2 AACAB9BE F834CC8F 
+  1CF633EC BC5A6C0D E4E94D49 E695C2D1 38E8620C 32EDC09F 1ECFBB63 65EF8827 
+  1550FE5B F011EE5F E758B289 3D551A28 9078C684 B98F1CCD F7726B3B CDBB6758 
+  2EA35167 E0AB73DA 71676FD4 D14391C1 1EE55E74 D9652F6D ACB5AD5A 2D3CB330 
+  440E2D25 953E3E36 5E8E33DB AF430A22 133F3ECD 2FFA6754 7AFED84B 30A808DB 
+  E2BB3F72 014B0203 010001A3 53305130 0F060355 1D130101 FF040530 030101FF 
+  301F0603 551D2304 18301680 14111AD6 A7BD60D6 785206A8 C04764EE 90F45EDA 
+  0F301D06 03551D0E 04160414 111AD6A7 BD60D678 5206A8C0 4764EE90 F45EDA0F 
+  300D0609 2A864886 F70D0101 05050003 82010100 4DA607EC FFB55EC2 54280DF1 
+  37DBEBBE 2E73B207 53379EB3 A9CABB4B 4CF8BE0F 062279D0 F2DE0BD9 B8FDA644 
+  19493039 D84DC536 04AF179E E4DCBA64 34A157F8 4FB21249 64C38B03 02FC1E85 
+  E1D68F58 0A0966FC 95628910 DC742557 D6DD6F90 F43440F6 A4128AB0 572D19C7 
+  DEA090F2 55D0D60E BF9FCBE6 640317E3 935E6BDB 3F7A4274 CC584845 7D6D78CF 
+  1034C9EC 4397B05B 4C4D7FAB 0DFC9DD1 B5938E27 A751A918 3AD48493 67488506 
+  1FF92450 EFDDC513 F41352FD 228585DE E7928954 7DCCE6C8 2B709DAB FE7520A4 
+  650B198C 3D0664FC FDBEB215 7FC9F2AA 222F46F8 F1152DF0 4569299C 113A616D 
+  581E7246 98383128 64D252DC C030A18A 0CB0A5E6
+  	quit
+!
+!
+!
+!
+!
+!
+!
+!
+!
+license udi pid CSR1000V sn 9EHTV0H39NP
+diagnostic bootup level minimal
+spanning-tree extend system-id
+!
+!
+!
+username cisco privilege 15 password 0 cisco
+!
+redundancy
+!
+!
+!
+!
+!
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+! 
+! 
+!
+!
+interface GigabitEthernet1
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet2
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet3
+ ip address 10.0.0.20 255.255.255.0
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+interface GigabitEthernet4
+ no ip address
+ shutdown
+ negotiation auto
+ no mop enabled
+ no mop sysid
+!
+!
+!
+ip forward-protocol nd
+ip http server
+ip http authentication local
+ip http secure-server
+ip http client source-interface GigabitEthernet3
+ip route 0.0.0.0 0.0.0.0 10.0.0.1
+!
+ip ssh server algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+ip ssh client algorithm encryption aes128-ctr aes192-ctr aes256-ctr
+!
+!
+!
+!
+!
+control-plane
+!
+!
+!
+!
+!
+!
+line con 0
+ stopbits 1
+line vty 0 4
+ login local
+!
+ntp server 34.208.249.133
+!
+!
+!
+!
+!
+!
+pnp profile pnp_cco_profile
+ transport https ipv4 52.203.231.173 port 443
+end
+

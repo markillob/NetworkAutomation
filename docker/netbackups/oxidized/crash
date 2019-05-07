@@ -1,0 +1,27 @@
+--------------------------------------------------
+2019-05-07 03:34:23 UTC
+no output file config, edit ~/.config/oxidized/config [Oxidized::NoConfig]
+--------------------------------------------------
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/output/file.rb:16:in `setup'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/manager.rb:18:in `load'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/manager.rb:60:in `loader'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/manager.rb:39:in `add_output'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/node.rb:162:in `resolve_output'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/node.rb:24:in `initialize'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/nodes.rb:21:in `new'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/nodes.rb:21:in `block (2 levels) in load'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/nodes.rb:16:in `each'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/nodes.rb:16:in `block in load'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/nodes.rb:130:in `synchronize'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/nodes.rb:130:in `with_lock'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/nodes.rb:10:in `load'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/nodes.rb:125:in `initialize'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/core.rb:14:in `new'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/core.rb:14:in `initialize'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/core.rb:4:in `new'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/core.rb:4:in `new'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/lib/oxidized/cli.rb:13:in `run'
+/var/lib/gems/2.5.0/gems/oxidized-0.26.3/bin/oxidized:8:in `<top (required)>'
+/usr/local/bin/oxidized:23:in `load'
+/usr/local/bin/oxidized:23:in `<main>'
+--------------------------------------------------
