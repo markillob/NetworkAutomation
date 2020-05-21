@@ -43,5 +43,4 @@ source:
       model: 1
     gpg: false
 model_map:
-  juniper: junos
   cisco: ios

@@ -1,24 +1,36 @@
 #Docker-compose file to run oxidized as a docker container
-version: '2'
-services:
-  oxidized:
-    restart: always
-    image: oxidized/oxidized:latest
-    expose:
-      - "8888"
-    environment:
-      CONFIG_RELOAD_INTERVAL: 600
-    volumes:
-       - ./oxidized:/root/.config/oxidized
-  nginx:
-    depends_on:
-      - oxidized
-    image: nginx:latest
-    container_name: nginx_proxy
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf
-      - ./certificates/:/etc/ssl/
-    ports:
-      - 443:443:tcp
-      - 80:80:tcp
-    restart: always
+#
+# docker-compose.yml
+# docker-compose file example for oxidized that will start along with docker daemon
+oxidized:
+  restart: always
+  image: oxidized/oxidized:latest
+  ports:
+    - 8888:8888/tcp
+  environment:
+    CONFIG_RELOAD_INTERVAL: 600
+  volumes:
+    - ./oxidized:/root/.config/oxidized
+#version: '2'
+#services:
+#  oxidized:
+#    restart: always
+#    image: oxidized/oxidized:latest
+#    ports:
+#      - 8888:888/tcp
+#    environment:
+#      CONFIG_RELOAD_INTERVAL: 600
+#    volumes:
+#       - ./oxidized:/root/.config/oxidized
+         #         nginx:
+         #depends_on:
+         # - oxidized
+         #image: nginx:latest
+         #container_name: nginx_proxy
+         #volumes:
+         #- ./nginx.conf:/etc/nginx/nginx.conf
+         #- ./certificates/:/etc/ssl/
+         #ports:
+         #- 443:443/tcp
+         #- 8080:8080/tcp
+         #restart: always
